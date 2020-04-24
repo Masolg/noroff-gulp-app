@@ -15,6 +15,7 @@ function image() {
     return src('src/images/*')
     .pipe(imagemin())
     .pipe(dest('dist/images'))
+    .pipe(browserSync.stream())
 }
 
 function watch(){
